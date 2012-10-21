@@ -103,7 +103,11 @@ $doc->addStyleSheet($this->baseurl.'/templates/system/css/system.css');
 
 			<div id="menu">
 				<div id="menuCont">
-					<jdoc:include type="modules" name="PrincipalMenu" class="panel" />
+					<span class="menuItem"><a href="#item1" class="panel">Inicio</a></span>
+					<span class="menuItem"><a href="#item2" class="panel">Quienes Somos</a></span>
+					<span class="menuItem"><a href="#item3" class="panel">Clientes</a></span>
+					<span class="menuItem"><a href="#item4" class="panel">Servicios</a></span>
+					<span class="menuItem"><a href="#item5" class="panel">Contacto</a></span>
 				</div>
 				<div id="menuFoot"></div>
 			</div>
@@ -111,7 +115,6 @@ $doc->addStyleSheet($this->baseurl.'/templates/system/css/system.css');
 			<div id="item1" class="item">
 				<a name="item1"></a>
 				<div class="content">
-					item1 <a href="#item1" class="panel">1</a> | <a href="#item2" class="panel">2</a> | <a href="#item3" class="panel">3</a> | <a href="#item4" class="panel">4</a> | <a href="#item5" class="panel">5</a>
 					<br />
 					<jdoc:include type="modules" name="Inicio" class="panel" />
 				</div>
@@ -120,7 +123,6 @@ $doc->addStyleSheet($this->baseurl.'/templates/system/css/system.css');
 			<div id="item2" class="item">
 				<a name="item2"></a>
 				<div class="content">
-					item2 <a href="#item1" class="panel">1</a> | <a href="#item2" class="panel">2</a> | <a href="#item3" class="panel">3</a> | <a href="#item4" class="panel">4</a> | <a href="#item5" class="panel">5</a>
 					<br />
 					<div class="contentTitle"><h2>¿Quines Somos?</h2></div>
 					<div class="contenttext">
@@ -134,7 +136,6 @@ $doc->addStyleSheet($this->baseurl.'/templates/system/css/system.css');
 			<div id="item3" class="item">
 				<a name="item3"></a>
 				<div class="content">
-					item3 <a href="#item1" class="panel">1</a> | <a href="#item2" class="panel">2</a> | <a href="#item3" class="panel">3</a> | <a href="#item4" class="panel">4</a> | <a href="#item5" class="panel">5</a>
 					<br />
 					<div class="contentTitle"><h2>Clientes</h2></div>
 					<jdoc:include type="modules" name="Client" class="panel" />
@@ -144,7 +145,6 @@ $doc->addStyleSheet($this->baseurl.'/templates/system/css/system.css');
 			<div id="item4" class="item">
 				<a name="item4"></a>
 				<div class="content">
-					item4 <a href="#item1" class="panel">1</a> | <a href="#item2" class="panel">2</a> | <a href="#item3" class="panel">3</a> | <a href="#item4" class="panel">4</a> | <a href="#item5" class="panel">5</a>
 					<br />
 					<div class="contentTitle"><h2>Servicios</h2></div>
 					<div class="contenttext">
@@ -161,15 +161,39 @@ $doc->addStyleSheet($this->baseurl.'/templates/system/css/system.css');
 			<div id="item5" class="item">
 				<a name="item5"></a>
 				<div class="content">
-					item5 <a href="#item1" class="panel">1</a> | <a href="#item2" class="panel">2</a> | <a href="#item3" class="panel">3</a> | <a href="#item4" class="panel">4</a> | <a href="#item5" class="panel">5</a>
 					<br />
 					<div class="contentTitle"><h2>Contáctanos</h2></div>
 					<div id="formcontainer">
 						<div id="form">
-
+							<table>
+								<tr>
+									<td>*Nombre:<br /><input type:"text" name="name"/></td>
+									<td rowspan="3">
+										*Mensaje<br />
+										<textarea row="100" col="15" ></textarea><br />
+										<input type="submit" name="submit" value="enviar" />
+									</td>
+								</tr>
+								<tr>
+									<td>*Empresa:<br /><input type:"text" name="empr"/></td>
+								</tr>
+								<tr>
+									<td>*email:<br /><input type:"text" name="mail"/></td>
+								</tr>
+							</table>
 						</div>
 						<div id="map">
-
+							<img src="templates/beez_20/images/mapa.jpg" alt="Mapa"/>
+						</div>
+						<div id="dta">
+							<div id="social">
+								<input type="image" src="templates/beez_20/images/Inside-facebook-32.png" name="image" width="32" height="32">
+								<br />
+								<input type="image" src="templates/beez_20/images/Inside-twitter-32.png" name="image" width="32" height="32">
+							</div>
+							<div id="adress">
+								<p>Britania #568<br />Américas Britania 680, CP 58270<br />Morelia, Mich.</p>
+							</div>
 						</div>
 					</div>
 					<jdoc:include type="modules" name="Contac" class="panel" />
